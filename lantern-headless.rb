@@ -5,12 +5,12 @@
 class LanternHeadless < Formula
   desc "Lantern Headless Client"
   homepage "https://github.com/getlantern/lantern-headless-client"
-  version "1.0.24"
+  version "1.0.26"
   license "GPL"
 
   on_macos do
-    url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.24/lantern-headless-all.dmg"
-    sha256 "ad29a13fa27836752a2a34191a74611f2a8efd6d266799fc9c50567fffb6310a"
+    url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless-all.dmg"
+    sha256 "fe326816b2cc9014a674a08b280820dec63e1b459338ea9ef0e8028898416560"
 
     def install
       bin.install "lantern-headless"
@@ -20,8 +20,8 @@ class LanternHeadless < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.24/lantern-headless_1.0.24_linux_amd64.tar.gz"
-        sha256 "541b1ee0d75dc0a8b603c42a10bb736644f1310c9622c369e3c165b8a2f8b6db"
+        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless_1.0.26_linux_amd64.tar.gz"
+        sha256 "4c4a30df7220a12552e6e3527fd3bc89bbf235261d6994959718851bc6db0e07"
 
         def install
           bin.install "lantern-headless"
@@ -30,8 +30,8 @@ class LanternHeadless < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.24/lantern-headless_1.0.24_linux_arm64.tar.gz"
-        sha256 "e530cee65345e94282cc374a75c9912655044fc5a31de57b3caf5a871cde1d27"
+        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless_1.0.26_linux_arm64.tar.gz"
+        sha256 "4ff533750656fd49d5fda5ddc79f268db9933088f51723e98bd07ac1c04c4b30"
 
         def install
           bin.install "lantern-headless"
