@@ -5,12 +5,12 @@
 class LanternHeadless < Formula
   desc "Lantern Headless Client"
   homepage "https://github.com/getlantern/lantern-headless-client"
-  version "1.0.26"
+  version "1.1.0"
   license "GPL"
 
   on_macos do
-    url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless-all.dmg"
-    sha256 "fe326816b2cc9014a674a08b280820dec63e1b459338ea9ef0e8028898416560"
+    url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.1.0/lantern-headless-all.dmg"
+    sha256 "b506f3faeee6103657de1c433e0ff48d3ddaa7be3ecdf65065a01343dd882cf5"
 
     def install
       bin.install "lantern-headless"
@@ -18,24 +18,18 @@ class LanternHeadless < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless_1.0.26_linux_amd64.tar.gz"
-        sha256 "4c4a30df7220a12552e6e3527fd3bc89bbf235261d6994959718851bc6db0e07"
-
-        def install
-          bin.install "lantern-headless"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.1.0/lantern-headless_1.1.0_linux_amd64.tar.gz"
+      sha256 "492bcf213dbb391e81e8cd0cfd730996de53ae6b3766cfb362448608a6209ce8"
+      def install
+        bin.install "lantern-headless"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.0.26/lantern-headless_1.0.26_linux_arm64.tar.gz"
-        sha256 "4ff533750656fd49d5fda5ddc79f268db9933088f51723e98bd07ac1c04c4b30"
-
-        def install
-          bin.install "lantern-headless"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getlantern/lantern-headless-client/releases/download/v1.1.0/lantern-headless_1.1.0_linux_arm64.tar.gz"
+      sha256 "a91b8dbd8ce31d6d79f5680570a91da9f38624c55ebcc990e77d189cfe06cd5e"
+      def install
+        bin.install "lantern-headless"
       end
     end
   end
